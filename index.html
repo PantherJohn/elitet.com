@@ -1,0 +1,432 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--<base href="../">-->
+<title>eLitet</title>
+</head>
+<link rel="stylesheet" href="jellybean/aos.css" />
+<style>
+@font-face {
+	font-family: FredokaOne;
+	src: url(jellybean/FredokaOne.ttf)
+}
+* {
+	box-sizing: border-box;
+}
+.nav {
+	margin-top: -1.5%;
+	margin-left: 2.5%;
+}
+.header {
+	font-family: FredokaOne;
+	padding: 72pt;
+	padding-right: 32pt;
+	font-weight: normal;
+	text-align: right;
+	height: 100vh;
+}
+::-webkit-scrollbar {
+ //display: none;
+}
+body {
+	font-family: FredokaOne;
+	background-color: lightblue;
+	margin: 0;
+}
+h1 {
+	font-size: 650%;
+	color: indianred;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+h2 {
+	font-size: 300%;
+	color: indianred;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-transform: capitalize;
+}
+h3 {
+	font-size: 250%;
+	color: indianred;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-transform: capitalize;
+}
+h4 {
+	font-size: 18pt;
+	font-weight: lighter;
+	margin-top: 0;
+	color: indianred;
+}
+.nav > h4 > a {
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-family: FredokaOne;
+	margin-left: 1%;
+	margin-right: 1%;
+	text-align: center;
+	cursor: default;
+	float: left;
+}
+.nav > h4 > a:hover {
+ //color: #000;
+}
+.nav > h4 > a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 15%;
+	bottom: -10%;
+	left: 0;
+	background-color: white;
+	visibility: hidden;
+	border-radius: 2px 2px 2px 2px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: all 0.3s ease-in-out 0s;
+}
+.nav > h4 > a:hover:before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+h4 > .branding:before {
+	display: none;
+	transform: none;
+}
+.stack {
+	margin-left: -10%;
+	transform-origin: center;
+	transition: transform .2s;
+}
+.stack:hover {
+	transform: scale(1.5) !important;
+}
+.exbt {
+	position: relative;
+	margin-left: 10%;
+	bottom: -0.5%;
+	transform: scale(0.8);
+	transform-origin: left bottom;
+	z-index: 0;
+}
+.cloud-small {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	max-width: 20%;
+	max-height: 20%;
+}
+.cloud-mid {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	max-width: 30%;
+	max-height: 30%;
+}
+.cloud-large {
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	max-width: 35%;
+	max-height: 35%;
+}
+button {
+	background-color: transparent;
+	border: 3.5px solid indianred;
+	border-radius: 100px;
+	text-align: center;
+	color: indianred;
+	font-size: 14pt;
+	padding: 6px 20px;
+	font-family: FredokaOne;
+	transition-duration: 0.3s;
+	margin-top: 12pt;
+}
+button:focus {
+	outline: 0;
+}
+button:hover {
+	background-color: indianred;
+	color: white;
+}
+ul {
+	list-style-type: none;
+	border: medium solid;
+	border-radius: 12pt;
+	width: 30%;
+}
+li {
+	border-bottom: 1px solid black;
+	display: list-item;
+	text-align: center;
+}
+scroll-container {
+	position: relative;
+	display: block;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	background-color: #FFF0CF;
+	z-index: 1;
+	width: 100%;
+}
+scroll-page {
+	overflow: hidden;
+}
+.content {
+	font-family: FredokaOne;
+	padding-top: 72pt;
+	padding-bottom: 72pt;
+	padding-left: 32pt;
+}
+.clipart {
+	position: sticky;
+	bottom: 0;
+	text-align: right;
+}
+.clipart-newt {
+	position: sticky;
+	text-align: right;
+}
+.illum {
+	width: 50%;
+}
+.illum-right {
+	margin-left: auto;
+	margin-right: 32pt;
+	text-align: right;
+}
+.clipart-right {
+	text-align: left;
+}
+.footer {
+	text-transform: none !important;
+	padding-bottom: 10%;
+	padding-top: 10%;
+	padding-left: 2.5%;
+	overflow: hidden;
+}
+.footer > h2 {
+	text-transform: none !important;
+}
+p {
+	color: indianred;
+	margin: 0;
+}
+a {
+	cursor: default;
+	color: lightskyblue;
+	text-decoration: none;
+}
+.social {
+	position: static;
+	margin: 0;
+	margin-left: 5%;
+	margin-bottom: -14%;
+	transform-origin: left bottom;
+	transform: scale(0.5);
+}
+</style>
+<body>
+<div class="nav">
+  <h4><a href="" class="branding">eLitet</a></h4>
+  <h4><a href="#pricing">Pricing</a></h4>
+  <h4><a href="#creatif">Creatif</a></h4>
+  <h4><a href="#future">Future</a></h4>
+</div>
+<div class="header" data-aos-anchor="#viewpoint">
+  <h1>FREEDOM!</h1>
+  <h2>That we all share</h2>
+  <h3>Learn about your data plan</h3>
+  <h3>Let's get started!</h3>
+  <button onClick="location.href='headstart'">Start</button>
+  <!--<img class="cloud-small" src="jellybean/cloud.png" alt="cloud"> <img class="cloud-mid" src="jellybean/cloud.png" alt="cloud"> <img class="cloud-large" src="jellybean/cloud.png" alt="cloud">-->
+  <div class="exbt" data-aos="slide-up" id="viewpoint"> </div>
+</div>
+<scroll-container id="flabber"> 
+  <!--
+  <scroll-page id="secure">
+    <div class="content" >
+      <div class="illum" data-aos="slide-left" id="sec-trigger">
+        <h1>Secure</h1>
+        <h2>It's time to keep a secret</h2>
+        <h3>All websites are served over HTTPS</h3>
+      </div>
+      <div class="clipart" data-aos="slide-up" data-aos-anchor="#sec-trigger"> <img src="jellybean/trump.png" alt="Trump" height="50%" width="50%"> </div>
+    </div>
+  </scroll-page>
+  <scroll-page id="fast">
+    <div class="content" >
+      <div class="illum" data-aos="slide-left" id="fst-trigger">
+        <h1>Fast</h1>
+        <h2>Speed is desirable</h2>
+        <h3>Over 1.0Gbps proxying speed. Beat the demon!</h3>
+      </div>
+      <div class="clipart" data-aos="slide-up" data-aos-anchor="#fst-trigger"> <img src="jellybean/trump.png" alt="Trump" height="50%" width="50%"> </div>
+    </div>
+  </scroll-page>--> 
+  
+</scroll-container>
+<scroll-container>
+  <scroll-page>
+    <div class="footer">
+      <h2>eLitet Inc.</h2>
+      <h4>enim melius propter seruilia ones</h4>
+      <p>Stay connected with our syberspace</p>
+      <p>7645 Hanover Dr. Moreno Valley, CA 92553.</p>
+      <p>Contact: <a href="mailto:customers@elitet.com">customers@elitet.com</a></p>
+      <p>Customer Portal: <a href="portals">Check it out here</a></p>
+      <h4>Follow us on<br>
+        Github <a href="https://github.com/eLitetInc">@eLitetInc</a></h4>
+      <div id="social" class="social"></div>
+    </div>
+  </scroll-page>
+</scroll-container>
+
+<!--<ul>
+<li>abs</li>
+<li>abs</li>
+<li>abs</li>
+</ul>-->
+</body>
+<script src="jellybean/aos.js"></script>
+<script>
+	
+	AOS.init({
+		duration: 400,
+		easing: 'ease-in-out-back',
+	});
+	
+	var emlist = [["Facebook",	"facebook.png",	"https://www.facebook.com", ""],
+				  ["Google",	"google.svg",	"https://www.google.com/ncr?gl=us&hl=en&pws=0&gws_rd=cr", ""],
+				  ["Youtube",	"youtube.png",	"https://www.youtube.com/?gl=US", ""],
+				  ["Twitter",	"twitter.png",	"https://www.twitter.com", ""],
+				  ["Instagram",	"instagram.png","https://www.instagram.com", ""]];
+
+	var flabbergastd = [["Secure","It's time to keep a secret","All websites are served over HTTPS","elepdd.png", ["Learn More", "#"]],
+					    ["Fast","Speed is desirable","Over 1.0Gbps proxying speed. Beat the demon!","elepdd.png"],
+					    ["Economical","Start with $5 a month","Our service is yours","elepdd.png", ["FREE TRAIL","#"]],
+					    ["Easy","Still worrying about the cumbersome configuration?","Stop! Unblock is one click away. It's always there.","elepdd.png"]];
+	
+	var srvPath = "jellybean/";
+	var footerBase = "footer/";
+	
+	function rand(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	
+	function bafoo() {
+		
+		var feedin = emlist;
+		
+		for (eachc in feedin) {
+			
+			var name = feedin[eachc][0];
+			var src = feedin[eachc][1];
+			var href = feedin[eachc][2];
+			var hrefscl = feedin[eachc][3];
+ 
+			var acontain = document.createElement("a");
+			var acontainscl;
+			var elem = document.createElement("img");
+
+			elem.setAttribute("src", srvPath + src);
+			elem.setAttribute("height", "20%");
+			elem.setAttribute("width", "20%");
+
+			elem.className = "stack";
+
+			var rotoken = "rotate("+rand(-25,25)+"deg);";
+			elem.style = "transform: " + rotoken;
+
+			acontain.setAttribute("href", href);
+			acontain.setAttribute("target", "_blank");
+
+			document.getElementById("viewpoint").appendChild(acontain).appendChild(elem);	
+
+			acontainscl = acontain.cloneNode(true);
+			acontainscl.setAttribute("href", hrefscl);
+
+			document.getElementById("social").appendChild(acontainscl);
+
+		}
+		
+	}
+	
+	function warb() {
+		
+		var flabbr = document.getElementById("flabber");
+		var align_left = true;
+		
+		for (eachc in flabbergastd) {
+			
+			var scroll_id = flabbergastd[eachc][0];
+			
+			var scroll_page = document.createElement("scroll-page");
+			var scroll_div = document.createElement("div");
+
+			var scroll_illum = document.createElement("div");
+			var scroll_clipart = document.createElement("div");
+			var clipart_trumpt = document.createElement("img");
+			
+			var action = document.createElement("button");
+			
+			var h1 = document.createElement("h1")
+			h1.innerHTML=flabbergastd[eachc][0];
+			var h2 = document.createElement("h2")
+			h2.innerHTML=flabbergastd[eachc][1];
+			var h3 = document.createElement("h3")
+			h3.innerHTML=flabbergastd[eachc][2];
+			
+			scroll_div.className = "content";
+			
+			scroll_page.id = scroll_id;
+			scroll_clipart.setAttribute("data-aos-anchor","#"+scroll_id);				
+			scroll_clipart.setAttribute("data-aos-anchor-placement","center-center");				
+
+			clipart_trumpt.setAttribute("src", srvPath + flabbergastd[eachc][3]);
+			clipart_trumpt.setAttribute("alt", scroll_id);
+			clipart_trumpt.setAttribute("height", "45%");
+			clipart_trumpt.setAttribute("width", "45%");
+			
+			if (align_left) {
+				scroll_illum.setAttribute("data-aos","slide-left");
+				scroll_clipart.setAttribute("data-aos","slide-right");
+				scroll_illum.className = "illum";
+				scroll_clipart.className = "clipart clipart-newt";
+				align_left = false;
+			} else {
+				scroll_illum.setAttribute("data-aos","slide-right");
+				scroll_clipart.setAttribute("data-aos","slide-left");
+				scroll_illum.className = "illum illum-right";
+				scroll_clipart.className = "clipart clipart-right clipart-newt";
+				align_left = true;
+			}
+			
+			var massive = flabbr.appendChild(scroll_page).appendChild(scroll_div);
+			var mass = massive.appendChild(scroll_illum);
+			
+			mass.appendChild(h1);
+			mass.appendChild(h2);
+			mass.appendChild(h3);
+			
+			if (flabbergastd[eachc].length > 4) {
+				action.innerHTML = flabbergastd[eachc][4][0];
+				action.setAttribute("onclick","location.href=\'"+flabbergastd[eachc][4][1]+"\'");
+				mass.appendChild(action);
+			}
+			
+			massive.appendChild(scroll_clipart).appendChild(clipart_trumpt);
+			
+		}
+
+		
+	}
+	
+	bafoo();
+	warb();
+	
+</script>
+</html>

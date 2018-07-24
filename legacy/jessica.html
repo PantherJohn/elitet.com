@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>eLitet</title>
+</head>
+<style>
+.stack {
+	margin-left: -10%;
+	transform-origin: center;
+	transition: transform .2s;
+}
+.stack:hover {
+	transform: scale(1.5) !important;
+}
+.exbt {
+	position: fixed;
+	margin-left: 10%;
+	bottom: 0%;
+	transform: scale(0.8);
+	transform-origin: left bottom;
+}
+</style>
+<body>
+<div class="exbt" id="viewpoint">
+</div>
+<script>
+	
+	var emlist = [["Facebook",	"facebook.png",	"https://www.facebook.com"],
+				  ["Google",	"google.svg",	"https://www.google.com/ncr?gl=us&hl=en&pws=0&gws_rd=cr"],
+				  ["Youtube",	"youtube.png",	"https://www.youtube.com/?gl=US"],
+				  ["Twitter",	"twitter.png",	"https://www.twitter.com"]];
+	
+	function rand(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	
+	function bafoo() {
+		
+		for (eachc in emlist) {
+			
+			var name = emlist[eachc][0];
+			var src = emlist[eachc][1];
+			var href = emlist[eachc][2];
+ 
+			var acontain = document.createElement("a");
+			
+			var elem = document.createElement("img");
+			
+			elem.setAttribute("src", "jellybean/"+src);
+			elem.setAttribute("height", "20%");
+			elem.setAttribute("width", "20%");
+			
+			elem.className = "stack";
+			
+			var rotoken = "rotate("+rand(-25,25)+"deg);";
+			elem.style = "transform: " + rotoken;
+			
+			acontain.setAttribute("href", href);
+			acontain.setAttribute("target", "_blank");
+			
+			document.getElementById("viewpoint").appendChild(acontain).appendChild(elem);
+			
+		}
+
+	}
+	
+	bafoo();
+	
+</script>
+</body>
+</html>

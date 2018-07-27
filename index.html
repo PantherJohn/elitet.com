@@ -2,233 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<!--<base href="../">-->
 <title>eLitet</title>
 </head>
 <link rel="stylesheet" href="jellybean/aos.css" />
-<style>
-@font-face {
-	font-family: FredokaOne;
-	src: url(jellybean/FredokaOne.ttf)
-}
-* {
-	box-sizing: border-box;
-}
-.nav {
-	margin-top: -1.5%;
-	margin-left: 2.5%;
-}
-.header {
-	font-family: FredokaOne;
-	padding: 72pt;
-	padding-right: 32pt;
-	font-weight: normal;
-	text-align: right;
-	height: 100vh;
-}
-::-webkit-scrollbar {
- //display: none;
-}
-body {
-	font-family: FredokaOne;
-	background-color: lightblue;
-	margin: 0;
-}
-h1 {
-	font-size: 650%;
-	color: indianred;
-	text-transform: uppercase;
-	margin-bottom: 0;
-}
-h2 {
-	font-size: 300%;
-	color: indianred;
-	margin-top: 0;
-	margin-bottom: 0;
-	text-transform: capitalize;
-}
-h3 {
-	font-size: 250%;
-	color: indianred;
-	margin-top: 0;
-	margin-bottom: 0;
-	text-transform: capitalize;
-}
-h4 {
-	font-size: 18pt;
-	font-weight: lighter;
-	margin-top: 0;
-	color: indianred;
-}
-.nav > h4 > a {
-	position: relative;
-	color: white;
-	text-decoration: none;
-	font-family: FredokaOne;
-	margin-left: 1%;
-	margin-right: 1%;
-	text-align: center;
-	cursor: default;
-	float: left;
-}
-.nav > h4 > a:hover {
- //color: #000;
-}
-.nav > h4 > a:before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 15%;
-	bottom: -10%;
-	left: 0;
-	background-color: white;
-	visibility: hidden;
-	border-radius: 2px 2px 2px 2px;
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: all 0.3s ease-in-out 0s;
-}
-.nav > h4 > a:hover:before {
-	visibility: visible;
-	transform: scaleX(1);
-}
-h4 > .branding:before {
-	display: none;
-	transform: none;
-}
-.stack {
-	margin-left: -10%;
-	transform-origin: center;
-	transition: transform .2s;
-}
-.stack:hover {
-	transform: scale(1.5) !important;
-}
-.exbt {
-	position: relative;
-	margin-left: 10%;
-	bottom: -0.5%;
-	transform: scale(0.8);
-	transform-origin: left bottom;
-	z-index: 0;
-}
-.cloud-small {
-	position: absolute;
-	top: 20%;
-	left: 20%;
-	max-width: 20%;
-	max-height: 20%;
-}
-.cloud-mid {
-	position: absolute;
-	top: 25%;
-	left: 25%;
-	max-width: 30%;
-	max-height: 30%;
-}
-.cloud-large {
-	position: absolute;
-	top: 25%;
-	left: 10%;
-	max-width: 35%;
-	max-height: 35%;
-}
-button {
-	background-color: transparent;
-	border: 3.5px solid indianred;
-	border-radius: 100px;
-	text-align: center;
-	color: indianred;
-	font-size: 14pt;
-	padding: 6px 20px;
-	font-family: FredokaOne;
-	transition-duration: 0.3s;
-	margin-top: 12pt;
-}
-button:focus {
-	outline: 0;
-}
-button:hover {
-	background-color: indianred;
-	color: white;
-}
-ul {
-	list-style-type: none;
-	border: medium solid;
-	border-radius: 12pt;
-	width: 30%;
-}
-li {
-	border-bottom: 1px solid black;
-	display: list-item;
-	text-align: center;
-}
-scroll-container {
-	position: relative;
-	display: block;
-	overflow-x: hidden;
-	scroll-behavior: smooth;
-	background-color: #FFF0CF;
-	z-index: 1;
-	width: 100%;
-}
-scroll-page {
-	overflow: hidden;
-}
-.content {
-	font-family: FredokaOne;
-	padding-top: 72pt;
-	padding-bottom: 72pt;
-	padding-left: 32pt;
-}
-.clipart {
-	position: sticky;
-	bottom: 0;
-	text-align: right;
-}
-.clipart-newt {
-	position: sticky;
-	text-align: right;
-}
-.illum {
-	width: 50%;
-}
-.illum-right {
-	margin-left: auto;
-	margin-right: 32pt;
-	text-align: right;
-}
-.clipart-right {
-	text-align: left;
-}
-.footer {
-	text-transform: none !important;
-	padding-bottom: 10%;
-	padding-top: 10%;
-	padding-left: 2.5%;
-	overflow: hidden;
-}
-.footer > h2 {
-	text-transform: none !important;
-}
-p {
-	color: indianred;
-	margin: 0;
-}
-a {
-	cursor: default;
-	color: lightskyblue;
-	text-decoration: none;
-}
-.social {
-	position: static;
-	margin: 0;
-	margin-left: 5%;
-	margin-bottom: -14%;
-	transform-origin: left bottom;
-	transform: scale(0.5);
-}
-</style>
+<link rel="stylesheet" href="jellybean/univ.css" />
 <body>
 <div class="nav">
   <h4><a href="" class="branding">eLitet</a></h4>
@@ -241,34 +18,10 @@ a {
   <h2>That we all share</h2>
   <h3>Learn about your data plan</h3>
   <h3>Let's get started!</h3>
-  <button onClick="location.href='headstart'">Start</button>
-  <!--<img class="cloud-small" src="jellybean/cloud.png" alt="cloud"> <img class="cloud-mid" src="jellybean/cloud.png" alt="cloud"> <img class="cloud-large" src="jellybean/cloud.png" alt="cloud">-->
+  <button onClick="location.href='support'">Start</button>
   <div class="exbt" data-aos="slide-up" id="viewpoint"> </div>
 </div>
-<scroll-container id="flabber"> 
-  <!--
-  <scroll-page id="secure">
-    <div class="content" >
-      <div class="illum" data-aos="slide-left" id="sec-trigger">
-        <h1>Secure</h1>
-        <h2>It's time to keep a secret</h2>
-        <h3>All websites are served over HTTPS</h3>
-      </div>
-      <div class="clipart" data-aos="slide-up" data-aos-anchor="#sec-trigger"> <img src="jellybean/trump.png" alt="Trump" height="50%" width="50%"> </div>
-    </div>
-  </scroll-page>
-  <scroll-page id="fast">
-    <div class="content" >
-      <div class="illum" data-aos="slide-left" id="fst-trigger">
-        <h1>Fast</h1>
-        <h2>Speed is desirable</h2>
-        <h3>Over 1.0Gbps proxying speed. Beat the demon!</h3>
-      </div>
-      <div class="clipart" data-aos="slide-up" data-aos-anchor="#fst-trigger"> <img src="jellybean/trump.png" alt="Trump" height="50%" width="50%"> </div>
-    </div>
-  </scroll-page>--> 
-  
-</scroll-container>
+<scroll-container id="flabber"> </scroll-container>
 <scroll-container>
   <scroll-page>
     <div class="footer">
@@ -284,12 +37,6 @@ a {
     </div>
   </scroll-page>
 </scroll-container>
-
-<!--<ul>
-<li>abs</li>
-<li>abs</li>
-<li>abs</li>
-</ul>-->
 </body>
 <script src="jellybean/aos.js"></script>
 <script>

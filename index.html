@@ -12,6 +12,7 @@
   <h4><a href="#pricing">Pricing</a></h4>
   <h4><a href="#creatif">Creatif</a></h4>
   <h4><a href="#future">Future</a></h4>
+  <h4><a href="tv">TV</a></h4>
 </div>
 <div class="header" data-aos-anchor="#viewpoint">
   <h1>FREEDOM!</h1>
@@ -40,140 +41,140 @@
 </body>
 <script src="jellybean/aos.js"></script>
 <script>
-	
-	AOS.init({
-		duration: 400,
-		easing: 'ease-in-out-back',
-	});
-	
-	var emlist = [["Facebook",	"facebook.png",	"https://www.facebook.com", ""],
-				  ["Google",	"google.svg",	"https://www.google.com/ncr?gl=us&hl=en&pws=0&gws_rd=cr", ""],
-				  ["Youtube",	"youtube.png",	"https://www.youtube.com/?gl=US", ""],
-				  ["Twitter",	"twitter.png",	"https://www.twitter.com", ""],
-				  ["Instagram",	"instagram.png","https://www.instagram.com", ""]];
+    
+    AOS.init({
+        duration: 400,
+        easing: 'ease-in-out-back',
+    });
+    
+    var emlist = [["Facebook",	"facebook.png",	"https://www.facebook.com", ""],
+                  ["Google",	"google.svg",	"https://www.google.com/ncr?gl=us&hl=en&pws=0&gws_rd=cr", ""],
+                  ["Youtube",	"youtube.png",	"https://www.youtube.com/?gl=US", ""],
+                  ["Twitter",	"twitter.png",	"https://www.twitter.com", ""],
+                  ["Instagram",	"instagram.png","https://www.instagram.com", ""]];
 
-	var flabbergastd = [["Secure","It's time to keep a secret","All websites are served over HTTPS","elepdd.png", ["Learn More", "#"]],
-					    ["Fast","Speed is desirable","Over 1.0Gbps proxying speed. Beat the demon!","elepdd.png"],
-					    ["Economical","Start with $5 a month","Our service is yours","elepdd.png", ["FREE TRAIL","#"]],
-					    ["Easy","Still worrying about the cumbersome configuration?","Stop! Unblock is one click away. It's always there.","elepdd.png"]];
-	
-	var srvPath = "jellybean/";
-	var footerBase = "footer/";
-	
-	function rand(min, max) {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-	
-	function bafoo() {
-		
-		var feedin = emlist;
-		
-		for (eachc in feedin) {
-			
-			var name = feedin[eachc][0];
-			var src = feedin[eachc][1];
-			var href = feedin[eachc][2];
-			var hrefscl = feedin[eachc][3];
+    var flabbergastd = [["Secure","It's time to keep a secret","All websites are served over HTTPS","elepdd.png", ["Learn More", "#"]],
+                        ["Fast","Speed is desirable","Over 1.0Gbps proxying speed. Beat the demon!","elepdd.png"],
+                        ["Economical","Start with $5 a month","Our service is yours","elepdd.png", ["FREE TRAIL","#"]],
+                        ["Easy","Still worrying about the cumbersome configuration?","Stop! Unblock is one click away. It's always there.","elepdd.png"]];
+    
+    var srvPath = "jellybean/";
+    var footerBase = "footer/";
+    
+    function rand(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    
+    function bafoo() {
+        
+        var feedin = emlist;
+        
+        for (eachc in feedin) {
+            
+            var name = feedin[eachc][0];
+            var src = feedin[eachc][1];
+            var href = feedin[eachc][2];
+            var hrefscl = feedin[eachc][3];
  
-			var acontain = document.createElement("a");
-			var acontainscl;
-			var elem = document.createElement("img");
+            var acontain = document.createElement("a");
+            var acontainscl;
+            var elem = document.createElement("img");
 
-			elem.setAttribute("src", srvPath + src);
-			elem.setAttribute("height", "20%");
-			elem.setAttribute("width", "20%");
+            elem.setAttribute("src", srvPath + src);
+            elem.setAttribute("height", "20%");
+            elem.setAttribute("width", "20%");
 
-			elem.className = "stack";
+            elem.className = "stack";
 
-			var rotoken = "rotate("+rand(-25,25)+"deg);";
-			elem.style = "transform: " + rotoken;
+            var rotoken = "rotate("+rand(-25,25)+"deg);";
+            elem.style = "transform: " + rotoken;
 
-			acontain.setAttribute("href", href);
-			acontain.setAttribute("target", "_blank");
+            acontain.setAttribute("href", href);
+            acontain.setAttribute("target", "_blank");
 
-			document.getElementById("viewpoint").appendChild(acontain).appendChild(elem);	
+            document.getElementById("viewpoint").appendChild(acontain).appendChild(elem);	
 
-			acontainscl = acontain.cloneNode(true);
-			acontainscl.setAttribute("href", hrefscl);
+            acontainscl = acontain.cloneNode(true);
+            acontainscl.setAttribute("href", hrefscl);
 
-			document.getElementById("social").appendChild(acontainscl);
+            document.getElementById("social").appendChild(acontainscl);
 
-		}
-		
-	}
-	
-	function warb() {
-		
-		var flabbr = document.getElementById("flabber");
-		var align_left = true;
-		
-		for (eachc in flabbergastd) {
-			
-			var scroll_id = flabbergastd[eachc][0];
-			
-			var scroll_page = document.createElement("scroll-page");
-			var scroll_div = document.createElement("div");
+        }
+        
+    }
+    
+    function warb() {
+        
+        var flabbr = document.getElementById("flabber");
+        var align_left = true;
+        
+        for (eachc in flabbergastd) {
+            
+            var scroll_id = flabbergastd[eachc][0];
+            
+            var scroll_page = document.createElement("scroll-page");
+            var scroll_div = document.createElement("div");
 
-			var scroll_illum = document.createElement("div");
-			var scroll_clipart = document.createElement("div");
-			var clipart_trumpt = document.createElement("img");
-			
-			var action = document.createElement("button");
-			
-			var h1 = document.createElement("h1")
-			h1.innerHTML=flabbergastd[eachc][0];
-			var h2 = document.createElement("h2")
-			h2.innerHTML=flabbergastd[eachc][1];
-			var h3 = document.createElement("h3")
-			h3.innerHTML=flabbergastd[eachc][2];
-			
-			scroll_div.className = "content";
-			
-			scroll_page.id = scroll_id;
-			scroll_clipart.setAttribute("data-aos-anchor","#"+scroll_id);				
-			scroll_clipart.setAttribute("data-aos-anchor-placement","center-center");				
+            var scroll_illum = document.createElement("div");
+            var scroll_clipart = document.createElement("div");
+            var clipart_trumpt = document.createElement("img");
+            
+            var action = document.createElement("button");
+            
+            var h1 = document.createElement("h1")
+            h1.innerHTML=flabbergastd[eachc][0];
+            var h2 = document.createElement("h2")
+            h2.innerHTML=flabbergastd[eachc][1];
+            var h3 = document.createElement("h3")
+            h3.innerHTML=flabbergastd[eachc][2];
+            
+            scroll_div.className = "content";
+            
+            scroll_page.id = scroll_id;
+            scroll_clipart.setAttribute("data-aos-anchor","#"+scroll_id);				
+            scroll_clipart.setAttribute("data-aos-anchor-placement","center-center");				
 
-			clipart_trumpt.setAttribute("src", srvPath + flabbergastd[eachc][3]);
-			clipart_trumpt.setAttribute("alt", scroll_id);
-			clipart_trumpt.setAttribute("height", "45%");
-			clipart_trumpt.setAttribute("width", "45%");
-			
-			if (align_left) {
-				scroll_illum.setAttribute("data-aos","slide-left");
-				scroll_clipart.setAttribute("data-aos","slide-right");
-				scroll_illum.className = "illum";
-				scroll_clipart.className = "clipart clipart-newt";
-				align_left = false;
-			} else {
-				scroll_illum.setAttribute("data-aos","slide-right");
-				scroll_clipart.setAttribute("data-aos","slide-left");
-				scroll_illum.className = "illum illum-right";
-				scroll_clipart.className = "clipart clipart-right clipart-newt";
-				align_left = true;
-			}
-			
-			var massive = flabbr.appendChild(scroll_page).appendChild(scroll_div);
-			var mass = massive.appendChild(scroll_illum);
-			
-			mass.appendChild(h1);
-			mass.appendChild(h2);
-			mass.appendChild(h3);
-			
-			if (flabbergastd[eachc].length > 4) {
-				action.innerHTML = flabbergastd[eachc][4][0];
-				action.setAttribute("onclick","location.href=\'"+flabbergastd[eachc][4][1]+"\'");
-				mass.appendChild(action);
-			}
-			
-			massive.appendChild(scroll_clipart).appendChild(clipart_trumpt);
-			
-		}
+            clipart_trumpt.setAttribute("src", srvPath + flabbergastd[eachc][3]);
+            clipart_trumpt.setAttribute("alt", scroll_id);
+            clipart_trumpt.setAttribute("height", "45%");
+            clipart_trumpt.setAttribute("width", "45%");
+            
+            if (align_left) {
+                scroll_illum.setAttribute("data-aos","slide-left");
+                scroll_clipart.setAttribute("data-aos","slide-right");
+                scroll_illum.className = "illum";
+                scroll_clipart.className = "clipart clipart-newt";
+                align_left = false;
+            } else {
+                scroll_illum.setAttribute("data-aos","slide-right");
+                scroll_clipart.setAttribute("data-aos","slide-left");
+                scroll_illum.className = "illum illum-right";
+                scroll_clipart.className = "clipart clipart-right clipart-newt";
+                align_left = true;
+            }
+            
+            var massive = flabbr.appendChild(scroll_page).appendChild(scroll_div);
+            var mass = massive.appendChild(scroll_illum);
+            
+            mass.appendChild(h1);
+            mass.appendChild(h2);
+            mass.appendChild(h3);
+            
+            if (flabbergastd[eachc].length > 4) {
+                action.innerHTML = flabbergastd[eachc][4][0];
+                action.setAttribute("onclick","location.href=\'"+flabbergastd[eachc][4][1]+"\'");
+                mass.appendChild(action);
+            }
+            
+            massive.appendChild(scroll_clipart).appendChild(clipart_trumpt);
+            
+        }
 
-		
-	}
-	
-	bafoo();
-	warb();
-	
+        
+    }
+    
+    bafoo();
+    warb();
+    
 </script>
 </html>
